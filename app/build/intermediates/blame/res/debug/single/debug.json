@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/layout_gesturepassword_create.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/layout/gesturepassword_create.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_green_disable.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_green_disable.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable_common_btn_red.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable/common_btn_red.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_pattern_item_bg.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_pattern_item_bg.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/anim_shake_y.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/anim/shake_y.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_green_normal.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_green_normal.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_red_disabled.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_red_disabled.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/anim_shake.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/anim/shake.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_pattern_selected.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_pattern_selected.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/layout_gesturepassword_guide.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/layout/gesturepassword_guide.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable_welcome_bg.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable/welcome_bg.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-hdpi_login_default_avatar.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-hdpi/login_default_avatar.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-hdpi_card_avatar.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-hdpi/card_avatar.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable_skin_color_button.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable/skin_color_button.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/anim_shake_x.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/anim/shake_x.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-hdpi_application_bg_welcome.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-hdpi/application_bg_welcome.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_green_pressed.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_green_pressed.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/layout_gesturepassword_unlock.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/layout/gesturepassword_unlock.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_guide_pic.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_guide_pic.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_create_grid_bg.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_create_grid_bg.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_pattern_selected_wrong.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_pattern_selected_wrong.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-hdpi_img_gesture.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-hdpi/img_gesture.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable_scrollbar_handle_vertical.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable/scrollbar_handle_vertical.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_red_pressed.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_red_pressed.9.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable_common_btn_green.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable/common_btn_green.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_gesture_create_grid_selected.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/gesture_create_grid_selected.png"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/anim_interpolator_cycle.xml.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/anim/interpolator_cycle.xml"
+    },
+    {
+        "merged": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/build/intermediates/res/merged/debug/drawable-xhdpi_skin_common_btn_red_unpressed.9.png.flat",
+        "source": "/Users/zhangchunliang/Documents/otherproject/LockPattern/LockPattern/app/src/main/res/drawable-xhdpi/skin_common_btn_red_unpressed.9.png"
+    }
+]
