@@ -1,6 +1,7 @@
 package com.way.view;
 
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,7 +13,11 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Xfermode;
 import android.os.Debug;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -127,13 +132,19 @@ public class LockPatternView extends View {
 	private int mAspect;
 	private final Matrix mCircleMatrix = new Matrix();
 
-
+	private static final Xfermode sMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
 	/**
 	 * 圆的半径
 	 */
-	private float bigRadius = 80f;
+	private float bigRadius = 85f;
 	private float whiteRadius = 74f;
 	private float littleRadius = 15f;
+
+	private Bitmap srcBitmap, dstBitmap;
+
+	private static final PorterDuff.Mode MODE = PorterDuff.Mode.DST_OUT;
+	private PorterDuffXfermode porterDuffXfermode;
+
 
 	/**
 	 * Represents a cell in the 3 X 3 matrix of the unlock pattern view.
@@ -305,9 +316,31 @@ public class LockPatternView extends View {
 			mBitmapHeight = Math.max(mBitmapHeight, bitmap.getHeight());
 		}
 		a.recycle();
+		porterDuffXfermode = new PorterDuffXfermode(MODE);
+		// 创建原图和目标图
+
 	}
 
-	@TargetApi(11)
+	/**
+	 * 绘制小白圆，位于蓝圆上层，比蓝圆小，中空形式
+	 * @param w
+	 * @param h
+	 * @return
+	 */
+	private Bitmap makeDst(int left, int top, int w, int h) {
+		Bitmap bm = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+		Canvas c = new Canvas(bm);
+		c.drawOval(new RectF(left, top, w, h), whiteCirclePaint);
+		return bm;
+	}
+
+	private Bitmap makeSrc(int left, int top, int w, int h) {
+		Bitmap bm = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+		Canvas c = new Canvas(bm);
+		c.drawOval(new RectF(left, top, w, h), bigCirclePaint);
+		return bm;
+	}
+		@TargetApi(11)
 	public void startDrawCircleAnimeValue() {
 		ValueAnimator valueAnimator = ValueAnimator.ofInt(0, 150);
 		valueAnimator.setDuration(2500L);
@@ -993,13 +1026,22 @@ public class LockPatternView extends View {
 				float centerX = getCenterXForColumn(cell.column);
 				float centerY = getCenterYForRow(cell.row);
 				if (i == 0) {
+//					float centerX2 = getCenterXForColumn(pattern.get(i+1).column);
+//					float centery2 = getCenterYForRow(pattern.get(i+1).row);
+//
+//					double A = Math.sqrt( Math.pow(centerX2 - centerX, 2)  +  Math.pow(centery2 - centerY, 2));
+//					double line_x = bigRadius * (centerX2 - centerX)/A;
+//					// 当前X坐标
+//					line_x += centerX;
+//
+//					double line_y = bigRadius * (centery2 - centerY)/A;
+//					line_y += centerY;
+//					currentPath.moveTo((float) line_x, (float) line_y);
 					currentPath.moveTo(centerX, centerY);
 					Log.i(TAG, "moveTo centerX:" + centerX + ",centerY:" + centerY);
-//					canvas.drawBitmap(mGestureHand, centerX, centerY, mPaint);
 				} else {
 					currentPath.lineTo(centerX, centerY);
 					Log.i(TAG, "lineTo centerX:" + centerX + ",centerY:" + centerY);
-//					canvas.drawBitmap(mGestureHand, centerX, centerY, mPaint);
 				}
 			}
 
@@ -1014,6 +1056,8 @@ public class LockPatternView extends View {
 				mPathPaint.setColor(Color.RED);
 			else
 				mPathPaint.setColor(circleColor);
+//			currentPath.setFillType(Path.FillType.WINDING);
+//			mPathPaint.setXfermode(new PorterDuffXfermode(android.graphics.PorterDuff.Mode.DST));
 			canvas.drawPath(currentPath, mPathPaint);
 		}
 
@@ -1096,9 +1140,6 @@ public class LockPatternView extends View {
 					+ mPatternDisplayMode);
 		}
 
-		final int width = mBitmapWidth;
-		final int height = mBitmapHeight;
-
 		final float squareWidth = mSquareWidth;
 		final float squareHeight = mSquareHeight;
 
@@ -1127,11 +1168,40 @@ public class LockPatternView extends View {
 			/**
 			 * 画蓝圆
  			 */
-			canvas.drawCircle(leftX + (squareWidth/2), topY + (squareHeight/2), bigRadius, bigCirclePaint);
+//			canvas.drawCircle(leftX + (squareWidth/2), topY + (squareHeight/2), bigRadius, bigCirclePaint);
+			srcBitmap = makeSrc(0,0, (int) bigRadius * 2, (int) bigRadius * 2);
+//			dstBitmap = makeDst(leftX + (int) (squareWidth/2), topY + (int) (squareHeight/2), (int) bigRadius * 2, (int) bigRadius * 2);
 			/**
 			 * 画白圆
  			 */
-			canvas.drawCircle(leftX + (squareWidth/2), topY + (squareHeight/2), whiteRadius, whiteCirclePaint);
+//			canvas.drawCircle(leftX + (squareWidth/2), topY + (squareHeight/2), whiteRadius, whiteCirclePaint);
+
+			//DST
+			dstBitmap = makeDst(0, 0, (int) whiteRadius * 2, (int) whiteRadius * 2);
+//			dstBitmap = makeDst(leftX + (int) (squareWidth/2), topY + (int) (squareHeight/2), (int) whiteRadius * 2, (int) whiteRadius * 2);
+//			whiteCirclePaint.setColor(Color.BLUE);
+//			whiteCirclePaint.setStyle(Paint.Style.STROKE);
+//			whiteCirclePaint.setXfermode(sMode);
+//			canvas.drawCircle(leftX + (squareWidth/2), topY + (squareHeight/2), whiteRadius,whiteCirclePaint);
+			Paint paint = new Paint();
+			paint.setFilterBitmap(false);
+			paint.setStyle(Paint.Style.FILL);
+
+			//Draw Dst
+			@SuppressLint("WrongConstant") int sc = canvas.saveLayer(0, 0, getMeasuredWidth(), getMeasuredHeight(), null, Canvas.MATRIX_SAVE_FLAG |
+					Canvas.CLIP_SAVE_FLAG |
+					Canvas.HAS_ALPHA_LAYER_SAVE_FLAG |
+					Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
+					Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+
+
+			canvas.drawBitmap(srcBitmap, leftX + squareWidth/2 - bigRadius, topY + squareHeight/2 - bigRadius, paint);
+			paint.setXfermode(porterDuffXfermode);
+			canvas.drawBitmap(dstBitmap, leftX + squareWidth/2 -whiteRadius, topY + squareHeight/2 - whiteRadius, paint);
+			paint.setXfermode(null);
+
+			canvas.restoreToCount(sc);
+
 		}
 
 		/**
